@@ -26,6 +26,6 @@
 - Storyline (AKA Scenario) (if any)
 
 <br>
-### notes
+### Notes
 Future feature : Players may be able to create their own Quests, Dongeons and enemies using config files.<br>
 The implementations will come once the related definition is complete.<br>
