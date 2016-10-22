@@ -1,4 +1,4 @@
-# The-amazing-adventures-of-not-that-interesting-adventurers
+# The amazing adventures of not that interesting adventurers
 
 
 ## Sounds fine, what's this?
