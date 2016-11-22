@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 3.0)
 
 # Add project
-project (tiaontia)
+project (taaontia)
 
 SET(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake/modules" ${CMAKE_MODULE_PATH})
 
@@ -26,7 +26,7 @@ else()
 endif()
 
 # Add executable
-add_executable(tiaontia ${SOURCES})
+add_executable(taaontia ${SOURCES})
 
 # Linking libraries
 if (UNIX)
@@ -38,7 +38,7 @@ if (UNIX)
 		# Adds NCURSES includes to project
 		include_directories(${CURSES_INCLUDE_DIR})
 		# Links executable against NCURSES library
-		target_link_libraries(tiaontia ${CURSES_LIBRARIES})
+		target_link_libraries(taaontia ${CURSES_LIBRARIES})
 	endif(CURSES_FOUND)
 else()
 	set(PDCURSES_ROOT "${CMAKE_CURRENT_LIST_DIR}/pdcurses/")
@@ -50,14 +50,14 @@ else()
 		# Adds PDCurses includes to project
 		include_directories(${PDCURSES_INCLUDE_DIR})
 		# Links executable against NCURSES library
-		target_link_libraries(tiaontia ${PDCURSES_LIBRARIES})
+		target_link_libraries(taaontia ${PDCURSES_LIBRARIES})
 	endif(PDCURSES_FOUND)
 endif()
 
-# Active le C++11
-target_compile_features (tiaontia PRIVATE cxx_constexpr)
-# Active le C++14
-# target_compile_features (tiaontia PRIVATE cxx_relaxed_constexpr)
+# Activate C++11
+target_compile_features (taaontia PRIVATE cxx_constexpr)
+# Activate C++14
+# target_compile_features (taaontia PRIVATE cxx_relaxed_constexpr)
 
 if (UNIX)
 	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -W -Wall -Wextra")
