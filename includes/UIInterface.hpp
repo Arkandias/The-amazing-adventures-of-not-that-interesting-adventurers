@@ -12,14 +12,23 @@ public:
   UIInterface(const UIInterface &) = delete;
   UIInterface& operator=(const UIInterface&) = delete;
 
-  void		GetScreenLimits(int &y, int &x);
-  void		MoveCursor(int y, int x);
-  void		Write(char c);
-  void		Write(const char *c);
-  void		Write(const std::string &c);
-  void		MoveWrite(int y, int x, char c);
-  void		MoveWrite(int y, int x, const char *c);
-  void		MoveWrite(int y, int x, const std::string &c);
+  /* Input utilities */
+  char		Getch() const;
+  
+  /* Screen Utilities */
+  void		RefreshScreen() const;
+  void		GetScreenLimits(int &y, int &x) const;
+  void		Noecho() const;
+  void		Echo() const;
+
+  /* Output Utilities */
+  void		MoveCursor(int y, int x) const;
+  void		Write(char c) const;
+  void		Write(const char *c) const;
+  void		Write(const std::string &c) const;
+  void		MoveWrite(int y, int x, char c) const;
+  void		MoveWrite(int y, int x, const char *c) const;
+  void		MoveWrite(int y, int x, const std::string &c) const;
 
 };
 
