@@ -4,9 +4,11 @@
 
 int main()
 {
-  //  UIInterface test;
+  UIInterface test;
 
   std::cout << "test" << std::endl;
-  //  test.Write("Type any character to see it in bold\n");
+  test.Write("Type any character to see it in bold\n");
+  refresh();
+  getch();
   return 0;
 }

@@ -6,7 +6,6 @@ UIInterface::UIInterface()
   initscr();
   raw();
   keypad(stdscr, TRUE);
-  noecho();
 }
 
 UIInterface::~UIInterface()
@@ -14,11 +13,35 @@ UIInterface::~UIInterface()
   endwin();
 }
 
+/* Input Utilities */
+char	UIInterface::Getch()
+{
+  return getch();
+}
+
+/* Screen Utilities */
+void	UIInterface::RefreshScreen()
+{
+  refrsh();
+}
+
 void	UIInterface::GetScreenLimits(int &y, int &x)
 {
   getmaxyx(stdscr, y, x);
 }
 
+void	UIInterface::Noecho()
+{
+  noecho();
+
+}
+
+void	UIInterface::Echo()
+{
+  echo();
+}
+
+/* Output Utilities */
 void	UIInterface::MoveCursor(int y, int x)
 {
   move(y, x);
