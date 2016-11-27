@@ -8,7 +8,7 @@ int main()
 
   std::cout << "test" << std::endl;
   test.Write("Type any character to see it in bold\n");
-  test.RefreshScreen();
+  test.Refresh();
   test.Getch();
   return 0;
 }
