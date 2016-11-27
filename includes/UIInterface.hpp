@@ -33,7 +33,6 @@ public:
   int		ScreenDump(const std::string &file) const;
   int		ScreenRestore(const char *file) const;
   int		ScreenRestore(const std::string &file) const;
-
   
   /* Window Utilities */
   /*** TO BE IMPLEMENTED ***/
