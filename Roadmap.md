@@ -1,16 +1,113 @@
 # Roadmap
 
-### Linux (70%)
+### Linux 
+#### Input Utilities - done
+- getch - done
+- scanw - done
+- mvscanw - done
+- mvscanw - done
+  
+#### Output Utilities
+- move - done
+- write - done
+- wwrite - done
+- mvwrite - done
+- mvwwrite - done
+- chgat
+- mvchgat
 
-- NCurses interface implementation 
+#### Color utilities
+- has_colors
+- start_color
+- init_pair
+
+#### Mouse Utilities
+- mousemask
+- getmouse
+
+#### Keyboard Utilities
+- keypad
+
+#### Screen Utilities
+- refresh - done
+- getscreenlimits - done
+- noecho - done
+- echo - done
+- attron
+- attroff
+- attrset
+- attr_get
+
+#### Window Utilities
+- createwindow - done
+- wborder - done
+- wrefresh - done
+- wattron
+- wattroff
+- wattrset
+- wattr_get
+  
+#### Screendumping Utilities
+- initscreen - done
+- screendump - done
+- screenrestore - done
+
 
 <br>
-### Windows (0%)
+### Windows
+#### Input Utilities
+- getch
+- scanw
+- mvscanw
+- mvscanw
+  
+#### Output Utilities
+- move
+- write
+- wwrite
+- mvwrite
+- mvwwrite
+- chgat
+- mvchgat
 
-- PDCurses interface implementation 
+#### Color utilities
+- has_colors
+- start_color
+- init_pair
+
+#### Mouse Utilities
+- mousemask
+- getmouse
+
+#### Keyboard Utilities
+- keypad
+
+#### Screen Utilities
+- refresh
+- getscreenlimits
+- noecho
+- echo
+- attron
+- attroff
+- attrset
+- attr_get
+
+#### Window Utilities
+- createwindow
+- wborder
+- wrefresh
+- wattron
+- wattroff
+- wattrset
+- wattr_get
+  
+#### Screendumping Utilities
+- initscreen
+- screendump
+- screenrestore
 
 <br>
-### Common (0%)
+### Common
 
 - Interface
 - Character, levels, stats, and stats-combat relation definition
