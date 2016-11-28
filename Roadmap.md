@@ -1,16 +1,16 @@
 # Roadmap
 
-### Linux
+### Linux (70%)
 
 - NCurses interface implementation 
 
 <br>
-### Windows
+### Windows (0%)
 
 - PDCurses interface implementation 
 
 <br>
-### Common
+### Common (0%)
 
 - Interface
 - Character, levels, stats, and stats-combat relation definition
