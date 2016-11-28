@@ -236,11 +236,27 @@ void	UIInterface::WBorder(void *win, const char *border)
     }
 }
 
+void  UIInterface::Delwin(unsigned int win_id)
+{
+  if (win_id > this->window_list_.size() - 1)
+    return ;
+  this->WBorder(window_list_[win_id], "        ");
+  this->WRefresh(window_list_[win_id]);
+  delwin((WINDOW *)(this->window_list_[win_id]));
+}
+
 void	UIInterface::WRefresh(unsigned int win_id)
 {
   if (win_id > this->window_list_.size() - 1)
     return ;
   wrefresh((WINDOW *)(this->window_list_[win_id]));
+}
+
+void  UIInterface::WRefresh(void *win)
+{
+  if (win == NULL)
+    return ;
+  wrefresh((WINDOW *)(win));
 }
 
 
