@@ -47,7 +47,7 @@
 - wattrset
 - wattr_get
   
-#### Screendumping Utilities
+#### Screendumping Utilities - done
 - initscreen - done
 - screendump - done
 - screenrestore - done
@@ -101,7 +101,7 @@
 - wattrset
 - wattr_get
   
-#### Screendumping Utilities - done
+#### Screendumping Utilities
 - initscreen
 - screendump
 - screenrestore
