@@ -20,16 +20,6 @@ char	UIInterface::Getch() const
   return getch();
 }
 
-int	UIInterface::Scanw(const char * &format, ...) const
-{
-  char buff[VARARG_MAX_SIZE];
-  va_list args;
-  va_start(args, format);
-  vsprintf(buff, format, args);
-  va_end(args);
-  return scanw(format, args);
-}
-
 int	UIInterface::Scanw(const std::string &format, ...) const
 {
   char buff[VARARG_MAX_SIZE];
@@ -38,16 +28,6 @@ int	UIInterface::Scanw(const std::string &format, ...) const
   vsprintf(buff, format.c_str(), args);
   va_end(args);
   return scanw(format.c_str(), args);
-}
-
-int	UIInterface::MvScanw(int y, int x, const char * &format, ...) const
-{
-  char buff[VARARG_MAX_SIZE];
-  va_list args;
-  va_start(args, format);
-  vsprintf(buff, format, args);
-  va_end(args);
-  return mvscanw(y, x, format, args);
 }
 
 int	UIInterface::MvScanw(int y, int x, const std::string &format, ...) const
@@ -71,11 +51,6 @@ void  UIInterface::Write(char c) const
   addch(c);
 }
 
-void  UIInterface::Write(const char *c) const
-{
-  addstr(c);
-}
-
 void  UIInterface::Write(const std::string &str) const
 {
   addstr(str.c_str());
@@ -86,13 +61,6 @@ void  UIInterface::WWrite(unsigned int win_id, char c) const
   if (win_id > this->window_list_.size() - 1)
     return ;
   waddch((WINDOW *)(this->window_list_[win_id]), c);
-}
-
-void  UIInterface::WWrite(unsigned int win_id, const char *c) const
-{
-  if (win_id > this->window_list_.size() - 1)
-    return ;
-  waddstr((WINDOW *)(this->window_list_[win_id]), c);
 }
 
 void  UIInterface::WWrite(unsigned int win_id, const std::string &str) const
@@ -107,11 +75,6 @@ void  UIInterface::MvWrite(int y, int x, char c) const
   mvaddch(y, x, c);
 }
 
-void  UIInterface::MvWrite(int y, int x, const char *c) const
-{
-  mvaddstr(y, x, c);
-}
-
 void  UIInterface::MvWrite(int y, int x, const std::string &str) const
 {
   mvaddstr(y, x, str.c_str());
@@ -122,13 +85,6 @@ void  UIInterface::MvWWrite(unsigned int win_id, int y, int x, char c) const
   if (win_id > this->window_list_.size() - 1)
     return ;
   mvwaddch((WINDOW *)(this->window_list_[win_id]), y, x, c);
-}
-
-void  UIInterface::MvWWrite(unsigned int win_id, int y, int x, const char *c) const
-{
-  if (win_id > this->window_list_.size() - 1)
-    return ;
-  mvwaddstr((WINDOW *)(this->window_list_[win_id]), y, x, c);
 }
 
 void  UIInterface::MvWWrite(unsigned int win_id, int y, int x, const std::string &str) const
@@ -170,21 +126,6 @@ int	UIInterface::CreateWindow(int height, int width, int starty, int startx)
   // Creating new window
   if ((win = newwin(height, width, starty, startx)) == NULL)
     return -1;
-  // Adding window to list
-  this->window_list_.push_back(win);
-  // Returning win_id
-  return this->window_list_.size() - 1;
-}
-
-int	UIInterface::CreateWindow(int height, int width, int starty, int startx, const char *border)
-{
-  WINDOW*	win;
-
-  // Creating new window
-  if ((win = newwin(height, width, starty, startx)) == NULL)
-    return -1;
-  // Applying border if format is correct
-  this->WBorder(win, border);
   // Adding window to list
   this->window_list_.push_back(win);
   // Returning win_id
@@ -261,29 +202,14 @@ void  UIInterface::WRefresh(void *win)
 
 
 /* Screendumping Utilities */
-int	UIInterface::InitScreen(const char *file) const
-{
-  return scr_init(file);
-}
-
 int	UIInterface::InitScreen(const std::string &file) const
 {
   return scr_init(file.c_str());
 }
 
-int	UIInterface::ScreenDump(const char *file) const
-{
-  return scr_dump(file);
-}
-
 int	UIInterface::ScreenDump(const std::string &file) const
 {
   return scr_dump(file.c_str());
-}
-
-int	UIInterface::ScreenRestore(const char *file) const
-{
-  return scr_restore(file);
 }
 
 int	UIInterface::ScreenRestore(const std::string &file) const
