@@ -1,18 +1,18 @@
 # Roadmap
 
 ### Linux 
-#### Input Utilities - done
-- getch - done
-- scanw - done
-- mvscanw - done
-- mvscanw - done
+#### Input Utilities
+- [x] getch
+- [x] scanw
+- [x] mvscanw
+- [x] mvscanw
   
 #### Output Utilities
-- move - done
-- write - done
-- wwrite - done
-- mvwrite - done
-- mvwwrite - done
+- [x] move
+- [x] write
+- [x] wwrite
+- [x] mvwrite
+- [x] mvwwrite
 - chgat
 - mvchgat
 
@@ -29,28 +29,28 @@
 - keypad
 
 #### Screen Utilities
-- refresh - done
-- getscreenlimits - done
-- noecho - done
-- echo - done
+- [x] refresh
+- [x] getscreenlimits
+- [x] noecho
+- [x] echo
 - attron
 - attroff
 - attrset
 - attr_get
 
 #### Window Utilities
-- createwindow - done
-- wborder - done
-- wrefresh - done
+- [x] createwindow
+- [x] wborder
+- [x] wrefresh
 - wattron
 - wattroff
 - wattrset
 - wattr_get
   
-#### Screendumping Utilities - done
-- initscreen - done
-- screendump - done
-- screenrestore - done
+# [x]### Screendumping Utilities
+- [x] initscreen
+- [x] screendump
+- [x] screenrestore
 
 
 <br>
@@ -113,7 +113,7 @@
 - Character, levels, stats, and stats-combat relation definition
 - Combat system and mechanics definition
 - Environnment interaction mechanics (movement, use / search for items / things, NPC dialogues, etc)
-- Monsters / creatures / enemies definition (see [Notes](#otes))
+- Monsters / creatures / enemies definition (see [Notes](#notes))
 - Equipment (AKA stuff) definition (rarity, droprates, etc)
 - Dungeons defintion (see [Notes](#notes))
 
