@@ -13,39 +13,39 @@
 - [x] wwrite
 - [x] mvwrite
 - [x] mvwwrite
-- chgat
-- mvchgat
+- [ ] chgat
+- [ ] mvchgat
 
 #### Color utilities
-- has_colors
-- start_color
-- init_pair
+- [ ] has_colors
+- [ ] start_color
+- [ ] init_pair
 
 #### Mouse Utilities
-- mousemask
-- getmouse
+- [ ] mousemask
+- [ ] getmouse
 
 #### Keyboard Utilities
-- keypad
+- [ ] keypad
 
 #### Screen Utilities
 - [x] refresh
 - [x] getscreenlimits
 - [x] noecho
 - [x] echo
-- attron
-- attroff
-- attrset
-- attr_get
+- [ ] attron
+- [ ] attroff
+- [ ] attrset
+- [ ] attr_get
 
 #### Window Utilities
 - [x] createwindow
 - [x] wborder
 - [x] wrefresh
-- wattron
-- wattroff
-- wattrset
-- wattr_get
+- [ ] wattron
+- [ ] wattroff
+- [ ] wattrset
+- [ ] wattr_get
   
 # [x]### Screendumping Utilities
 - [x] initscreen
@@ -56,55 +56,55 @@
 <br>
 ### Windows
 #### Input Utilities
-- getch
-- scanw
-- mvscanw
-- mvscanw
+- [ ] getch
+- [ ] scanw
+- [ ] mvscanw
+- [ ] mvscanw
   
 #### Output Utilities
-- move
-- write
-- wwrite
-- mvwrite
-- mvwwrite
-- chgat
-- mvchgat
+- [ ] move
+- [ ] write
+- [ ] wwrite
+- [ ] mvwrite
+- [ ] mvwwrite
+- [ ] chgat
+- [ ] mvchgat
 
 #### Color utilities
-- has_colors
-- start_color
-- init_pair
+- [ ] has_colors
+- [ ] start_color
+- [ ] init_pair
 
 #### Mouse Utilities
-- mousemask
-- getmouse
+- [ ] mousemask
+- [ ] getmouse
 
 #### Keyboard Utilities
-- keypad
+- [ ] keypad
 
 #### Screen Utilities
-- refresh
-- getscreenlimits
-- noecho
-- echo
-- attron
-- attroff
-- attrset
-- attr_get
+- [ ] refresh
+- [ ] getscreenlimits
+- [ ] noecho
+- [ ] echo
+- [ ] attron
+- [ ] attroff
+- [ ] attrset
+- [ ] attr_get
 
 #### Window Utilities
-- createwindow
-- wborder
-- wrefresh
-- wattron
-- wattroff
-- wattrset
-- wattr_get
+- [ ] createwindow
+- [ ] wborder
+- [ ] wrefresh
+- [ ] wattron
+- [ ] wattroff
+- [ ] wattrset
+- [ ] wattr_get
   
 #### Screendumping Utilities
-- initscreen
-- screendump
-- screenrestore
+- [ ] initscreen
+- [ ] screendump
+- [ ] screenrestore
 
 <br>
 ### Common
