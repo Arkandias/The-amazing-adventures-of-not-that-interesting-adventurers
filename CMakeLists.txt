@@ -41,6 +41,8 @@ if (UNIX)
 		target_link_libraries(taaontia ${CURSES_LIBRARIES})
 	endif(CURSES_FOUND)
 else()
+	# Include headers directory
+	include_directories ("pdcurses")
 	set(PDCURSES_ROOT "${CMAKE_CURRENT_LIST_DIR}/pdcurses/")
 	# Search for PDCurses
 	find_package(PDCURSES REQUIRED)
