@@ -19,25 +19,16 @@ char	UIInterface::Getch() const
 {
   return getch();
 }
-
-int	UIInterface::Scanw(const std::string &format, ...) const
+template<typename... Args>
+int	UIInterface::Scanw(const std::string &format, Args&&... args) const
 {
-  char buff[VARARG_MAX_SIZE];
-  va_list args;
-  va_start(args, format);
-  vsprintf(buff, format.c_str(), args);
-  va_end(args);
-  return scanw(format.c_str(), args);
+  return scanw(format.c_str(), args...);
 }
 
-int	UIInterface::MvScanw(int y, int x, const std::string &format, ...) const
+template<typename... Args>
+int	UIInterface::MvScanw(int y, int x, const std::string &format, Args&&... args) const
 {
-  char buff[VARARG_MAX_SIZE];
-  va_list args;
-  va_start(args, format);
-  vsprintf(buff, format.c_str(), args);
-  va_end(args);
-  return mvscanw(y, x, format.c_str(), args);
+  return mvscanw(y, x, format.c_str(), args...);
 }
 
 /* Output Utilities */

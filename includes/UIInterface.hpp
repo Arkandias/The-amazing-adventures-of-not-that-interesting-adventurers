@@ -28,8 +28,10 @@ public:
 
   /* Input utilities */
   char	 Getch() const;
-  int		 Scanw(const std::string &format, ...) const;
-  int		 MvScanw(int y, int x, const std::string &format, ...) const;
+  template<typename... Args>
+  int		 Scanw(const std::string &format, Args&&...) const;
+  template<typename... Args>
+  int		 MvScanw(int y, int x, const std::string &format, Args&&...) const;
   
   /* Output Utilities */
   void	 Move(int y, int x) const;
