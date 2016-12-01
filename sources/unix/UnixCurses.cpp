@@ -1,4 +1,5 @@
 #include "UIInterface.hpp"
+#include <ncurses.h>
 #include <iostream>
 #include <cstring>
 
@@ -85,6 +86,54 @@ void  UIInterface::MvWWrite(unsigned int win_id, int y, int x, const std::string
   mvwaddstr((WINDOW *)(this->window_list_[win_id]), y, x, str.c_str());
 }
 
+void  UIInterface::Chgat(int length, long unsigned int attrs, short color, const void *opts) const
+{
+  chgat(length, attrs, color, opts);
+}
+
+void  UIInterface::MvChgat(int y, int x, int length, long unsigned int attrs, short color, const void *opts) const
+{
+  mvchgat(y, x, length, attrs, color, opts);
+}
+
+
+/* Color Utilities */
+bool  UIInterface::HasColors() const
+{
+  return has_colors();
+}
+
+int   UIInterface::InitPair(short pair, short front, short back) const
+{
+  return init_pair(pair, front, back);
+}
+
+int   UIInterface::StartColor() const
+{
+  return start_color();
+}
+
+
+/* Mouse Utilities */
+long unsigned int UIInterface::Mousemask(long unsigned int newmask, long unsigned int *oldmask) const
+{
+  return mousemask(newmask, oldmask);
+}
+
+int   UIInterface::Getmouse(void *event)
+{
+  return getmouse((MEVENT *)event);
+}
+
+
+/* Keyboard Utilities */
+int   UIInterface::Keypad(unsigned int win_id, bool enabled)
+{
+  if (win_id > this->window_list_.size())
+    return -1;
+  return keypad((WINDOW *)(this->window_list_[win_id]), enabled);
+}
+
 
 /* Screen Utilities */
 void	UIInterface::Refresh() const
@@ -106,6 +155,26 @@ void	UIInterface::Noecho() const
 void	UIInterface::Echo() const
 {
   echo();
+}
+
+int   UIInterface::Attron(int attrs) const
+{
+  return attron(attrs);
+}
+
+int   UIInterface::Attroff(int attrs) const
+{
+  return attroff(attrs);
+}
+
+int   UIInterface::Attrset(int attrs) const
+{
+  return attrset(attrs);
+}
+
+int   UIInterface::AttrGet(unsigned long int *attrs, short *pair) const
+{
+  return attr_get(attrs, pair, options);
 }
 
 
@@ -189,6 +258,34 @@ void  UIInterface::WRefresh(void *win)
   if (win == NULL)
     return ;
   wrefresh((WINDOW *)(win));
+}
+
+int   UIInterface::WAttron(unsigned int win_id, int attrs) const
+{
+  if (win_id > this->window_list_.size())
+    return -1;
+  return wattron((WINDOW *)(this->window_list_[win_id]), attrs);
+}
+
+int   UIInterface::WAttroff(unsigned int win_id, int attrs) const
+{
+  if (win_id > this->window_list_.size())
+    return -1;
+  return wattroff((WINDOW *)(this->window_list_[win_id]), attrs);
+}
+
+int   UIInterface::WAttrset(unsigned int win_id, int attrs) const
+{
+  if (win_id > this->window_list_.size())
+    return -1;
+  return wattrset((WINDOW *)(this->window_list_[win_id]), attrs);
+}
+
+int   UIInterface::WAttrGet(unsigned int win_id, unsigned long int *attrs, short *pair) const
+{
+  if (win_id > this->window_list_.size())
+    return -1;
+  return wattr_get((WINDOW *)(this->window_list_[win_id]), attrs, pair, options);
 }
 
 

@@ -13,39 +13,39 @@
 - [x] wwrite
 - [x] mvwrite
 - [x] mvwwrite
-- [ ] chgat
-- [ ] mvchgat
+- [x] chgat
+- [x] mvchgat
 
-#### Color utilities
-- [ ] has_colors
-- [ ] start_color
-- [ ] init_pair
+#### Color Utilities
+- [x] has_colors
+- [x] start_color
+- [x] init_pair
 
 #### Mouse Utilities
-- [ ] mousemask
-- [ ] getmouse
+- [x] mousemask
+- [x] getmouse
 
 #### Keyboard Utilities
-- [ ] keypad
+- [x] keypad
 
 #### Screen Utilities
 - [x] refresh
 - [x] getscreenlimits
 - [x] noecho
 - [x] echo
-- [ ] attron
-- [ ] attroff
-- [ ] attrset
-- [ ] attr_get
+- [x] attron
+- [x] attroff
+- [x] attrset
+- [x] attr_get
 
 #### Window Utilities
 - [x] createwindow
 - [x] wborder
 - [x] wrefresh
-- [ ] wattron
-- [ ] wattroff
-- [ ] wattrset
-- [ ] wattr_get
+- [x] wattron
+- [x] wattroff
+- [x] wattrset
+- [x] wattr_get
   
 # [x]### Screendumping Utilities
 - [x] initscreen
