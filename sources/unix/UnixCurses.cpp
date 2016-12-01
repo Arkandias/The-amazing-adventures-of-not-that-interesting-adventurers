@@ -62,6 +62,34 @@ void  UIInterface::WWrite(unsigned int win_id, const std::string &str) const
   waddstr((WINDOW *)(this->window_list_[win_id]), str.c_str());
 }
 
+template<typename... Args>
+int    UIInterface::Printw(const std::string &format, Args&&... args) const
+{
+  return printw(format, args...)
+}
+
+template<typename... Args>
+int    UIInterface::MvPrintw(int y, int x, const std::string &format, Args&&... args) const
+{
+  return mvprintw(y, x, format, args...)
+}
+
+template<typename... Args>
+int    UIInterface::WPrintw(unsigned int win_id, const std::string &format, Args&&... args) const
+{
+  if (win_id > this->window_list_.size())
+    return -1;
+  return wprintw((WINDOW *)(this->window_list_[win_id]), format, args...)
+}
+
+template<typename... Args>
+int    UIInterface::WMvPrintw(unsigned int win_id, int y, int x, const std::string &format, Args&&... args) const
+{
+  if (win_id > this->window_list_.size())
+    return -1;
+  return mvwprintw((WINDOW *)(this->window_list_[win_id]), y, x, format, args...)
+}
+
 void  UIInterface::MvWrite(int y, int x, char c) const
 {
   mvaddch(y, x, c);
