@@ -47,7 +47,7 @@
 - [x] wattrset
 - [x] wattr_get
   
-# [x]### Screendumping Utilities
+#### Screendumping Utilities
 - [x] initscreen
 - [x] screendump
 - [x] screenrestore
