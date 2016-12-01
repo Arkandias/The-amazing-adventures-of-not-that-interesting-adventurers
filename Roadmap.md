@@ -56,55 +56,55 @@
 <br>
 ### Windows
 #### Input Utilities
-- [ ] getch
-- [ ] scanw
-- [ ] mvscanw
-- [ ] mvscanw
+- [x] getch
+- [x] scanw
+- [x] mvscanw
+- [x] mvscanw
   
 #### Output Utilities
-- [ ] move
-- [ ] write
-- [ ] wwrite
-- [ ] mvwrite
-- [ ] mvwwrite
-- [ ] chgat
-- [ ] mvchgat
+- [x] move
+- [x] write
+- [x] wwrite
+- [x] mvwrite
+- [x] mvwwrite
+- [x] chgat
+- [x] mvchgat
 
 #### Color utilities
-- [ ] has_colors
-- [ ] start_color
-- [ ] init_pair
+- [x] has_colors
+- [x] start_color
+- [x] init_pair
 
 #### Mouse Utilities
-- [ ] mousemask
-- [ ] getmouse
+- [x] mousemask
+- [x] getmouse
 
 #### Keyboard Utilities
-- [ ] keypad
+- [x] keypad
 
 #### Screen Utilities
-- [ ] refresh
-- [ ] getscreenlimits
-- [ ] noecho
-- [ ] echo
-- [ ] attron
-- [ ] attroff
-- [ ] attrset
-- [ ] attr_get
+- [x] refresh
+- [x] getscreenlimits
+- [x] noecho
+- [x] echo
+- [x] attron
+- [x] attroff
+- [x] attrset
+- [x] attr_get
 
 #### Window Utilities
-- [ ] createwindow
-- [ ] wborder
-- [ ] wrefresh
-- [ ] wattron
-- [ ] wattroff
-- [ ] wattrset
-- [ ] wattr_get
+- [x] createwindow
+- [x] wborder
+- [x] wrefresh
+- [x] wattron
+- [x] wattroff
+- [x] wattrset
+- [x] wattr_get
   
 #### Screendumping Utilities
-- [ ] initscreen
-- [ ] screendump
-- [ ] screenrestore
+- [x] initscreen
+- [x] screendump
+- [x] screenrestore
 
 <br>
 ### Common
