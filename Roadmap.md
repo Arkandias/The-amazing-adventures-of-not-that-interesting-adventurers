@@ -11,6 +11,10 @@
 - [x] move
 - [x] write
 - [x] wwrite
+- [x] printw
+- [x] mvprintw
+- [x] wprintw
+- [x] mvwprintw
 - [x] mvwrite
 - [x] mvwwrite
 - [x] chgat
@@ -65,6 +69,10 @@
 - [x] move
 - [x] write
 - [x] wwrite
+- [x] printw
+- [x] mvprintw
+- [x] wprintw
+- [x] mvwprintw
 - [x] mvwrite
 - [x] mvwwrite
 - [x] chgat

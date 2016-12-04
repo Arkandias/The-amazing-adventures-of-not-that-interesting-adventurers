@@ -185,6 +185,21 @@ void	UIInterface::Echo() const
   echo();
 }
 
+void  UIInterface::Raw() const
+{
+  raw();
+}
+
+void  UIInterface::CBreak() const
+{
+  cbreak();
+}
+
+void  UIInterface::NoCBreak() const
+{
+  nocbreak();
+}
+
 int   UIInterface::Attron(int attrs) const
 {
   return attron(attrs);

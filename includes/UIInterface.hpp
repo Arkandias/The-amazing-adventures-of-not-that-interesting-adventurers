@@ -38,6 +38,14 @@ public:
   void	 Write(const std::string &c) const;
   void   WWrite(unsigned int win_id, char c) const;
   void   WWrite(unsigned int win_id, const std::string &c) const;
+  template<typename... Args>
+  int    Printw(const std::string &format, Args&&...) const;
+  template<typename... Args>
+  int    MvPrintw(int y, int x, const std::string &format, Args&&...) const;
+  template<typename... Args>
+  int    WPrintw(unsigned int win_id, const std::string &format, Args&&...) const;
+  template<typename... Args>
+  int    WMvPrintw(unsigned int win_id, int y, int x, const std::string &format, Args&&...) const;
   void   MvWrite(int y, int x, char c) const;
   void   MvWrite(int y, int x, const std::string &c) const;
   void   MvWWrite(unsigned int win_id, int y, int x, char c) const;
@@ -62,6 +70,9 @@ public:
   void	 GetScreenLimits(int &y, int &x) const;
   void	 Noecho() const;
   void	 Echo() const;
+  void   Raw() const;
+  void   CBreak() const;
+  void   NoCBreak() const;
   int    Attron(int attrs) const;
   int    Attroff(int attrs) const;
   int    Attrset(int attrs) const;
